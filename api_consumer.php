@@ -27,7 +27,8 @@ add_action( 'elementor_pro/forms/new_record', function( $record, $ajax_handler )
     foreach ( $raw_fields as $id => $field ) {
         $fields[ $id ] = $field['value'];
     }
-
+    require_once plugin_dir_path(__FILE__) . 'src/url_to_base64.php';
+    $fields['photoBase64'] = url_to_base64($fields['photoBase64']);
     // Prepare os dados para a solicitação
     $request_data = array(
         'userName' => $fields['userName'],
