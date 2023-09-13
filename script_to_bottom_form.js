@@ -11,9 +11,6 @@ jQuery( document ).ready(function( $ ){
             }else if(data.status == 400){
                 document.querySelector('#formAccountMessage').innerHTML = 'Os dados estão incorretos ou a conta já existe'
             }
-            else{
-
-            }
         }
     });
 });
