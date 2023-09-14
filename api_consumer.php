@@ -34,7 +34,7 @@ add_action( 'elementor_pro/forms/new_record', function( $record, $ajax_handler )
     // Prepare os dados para a solicitação
     $request_data = array(
         'userName' => $fields['userName'],
-        'email' => $fields['email'],
+        'email' => $fields['emailField'],
         'confirmEmail' => $fields['confirmEmail'],
         'password' => $fields['password'],
         'confirmPassword' => $fields['confirmPassword'],
