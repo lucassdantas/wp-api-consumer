@@ -2,7 +2,6 @@ jQuery( document ).ready(function( $ ){
     $( document ).on('submit_success', function( event, response ){
         if ( response.data.output ) {
             let data = JSON.parse(response.data.output)
-            console.log(data)
             if(data.status == 200){
                 document.querySelector('#formAccountMessage').innerHTML = 'Conta criada com sucesso! Em Breve, será redirecioado.'
                 setTimeout(() => {
